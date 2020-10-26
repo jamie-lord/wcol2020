@@ -1,239 +1,259 @@
 <html>
-  <head>
+<head>
     <style>
-      /*
- *  Flex Layout Specifics
-*/
-      main {
-        display: flex;
-        flex-direction: row;
-      }
-      .round {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 200px;
-        list-style: none;
-        padding: 0;
-      }
-      .round .spacer {
-        flex-grow: 1;
-      }
-      .round .spacer:first-child,
-      .round .spacer:last-child {
-        flex-grow: 0.5;
-      }
+                /*
+         *  Flex Layout Specifics
+        */
+                main {
+                    display: flex;
+                    flex-direction: row;
+                }
 
-      .round .game-spacer {
-        flex-grow: 1;
-      }
+                .round {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 200px;
+                    list-style: none;
+                    padding: 0;
+                }
 
-      /*
- *  General Styles
-*/
-      body {
-        font-family: sans-serif;
-        font-size: small;
-        padding: 10px;
-        line-height: 1.4em;
-      }
+                    .round .spacer {
+                        flex-grow: 1;
+                    }
 
-      li.game {
-        padding-left: 20px;
-      }
+                        .round .spacer:first-child,
+                        .round .spacer:last-child {
+                            flex-grow: 0.5;
+                        }
 
-      li.game.winner {
-        font-weight: bold;
-      }
-      li.game span {
-        float: right;
-        margin-right: 5px;
-      }
+                    .round .game-spacer {
+                        flex-grow: 1;
+                    }
 
-      li.game-top {
-        border-bottom: 1px solid #aaa;
-      }
+                /*
+         *  General Styles
+        */
+                body {
+                    font-family: sans-serif;
+                    font-size: small;
+                    padding: 10px;
+                    line-height: 1.4em;
+                }
 
-      li.game-spacer {
-        border-right: 1px solid #aaa;
-        min-height: 40px;
-      }
+                li.game {
+                    padding-left: 20px;
+                }
 
-      li.game-bottom {
-        border-top: 1px solid #aaa;
-      }
+                    li.game.winner {
+                        font-weight: bold;
+                    }
 
-      .bakerloo {
-        background-color: #996633 !important;
-        color: #fff !important;
-      }
-      .northern {
-        background-color: #000 !important;
-        color: #fff !important;
-      }
-      .central {
-        background-color: #cc3333 !important;
-        color: #fff !important;
-      }
-      .circle {
-        background-color: #ffcc00 !important;
-        color: #000 !important;
-      }
-      .district {
-        background-color: #006633 !important;
-        color: #fff !important;
-      }
-      .dlr {
-        background-color: #009999 !important;
-        color: #fff !important;
-      }
-      .handc {
-        background-color: #cc9999 !important;
-        color: #000 !important;
-      }
-      .jubilee {
-        background-color: #868f98 !important;
-        color: #000 !important;
-      }
-      .metropolitan {
-        background-color: #660066 !important;
-        color: #fff !important;
-      }
-      .overground {
-        background-color: #ff6600 !important;
-        color: #fff !important;
-      }
-      .piccadilly {
-        background-color: #000099 !important;
-        color: #fff !important;
-      }
-      .thameslink {
-        background-color: #fff !important;
-        color: #000 !important;
-      }
-      .victoria {
-        background-color: #0099cc !important;
-        color: #fff !important;
-      }
-      .trams {
-        background-color: #66cc00 !important;
-        color: #fff !important;
-      }
-      .cablecar {
-        background-color: #e21836 !important;
-        color: #fff !important;
-      }
-      .tflrail {
-        background-color: #7156a5 !important;
-        color: #fff !important;
-      }
+                    li.game span {
+                        float: right;
+                        margin-right: 5px;
+                    }
+
+                li.game-top {
+                    border-bottom: 1px solid #aaa;
+                }
+
+                li.game-spacer {
+                    border-right: 1px solid #aaa;
+                    min-height: 40px;
+                }
+
+                li.game-bottom {
+                    border-top: 1px solid #aaa;
+                }
+
+                .bakerloo {
+                    background-color: #996633 !important;
+                    color: #fff !important;
+                }
+
+                .northern {
+                    background-color: #000 !important;
+                    color: #fff !important;
+                }
+
+                .central {
+                    background-color: #cc3333 !important;
+                    color: #fff !important;
+                }
+
+                .circle {
+                    background-color: #ffcc00 !important;
+                    color: #000 !important;
+                }
+
+                .district {
+                    background-color: #006633 !important;
+                    color: #fff !important;
+                }
+
+                .dlr {
+                    background-color: #009999 !important;
+                    color: #fff !important;
+                }
+
+                .handc {
+                    background-color: #cc9999 !important;
+                    color: #000 !important;
+                }
+
+                .jubilee {
+                    background-color: #868f98 !important;
+                    color: #000 !important;
+                }
+
+                .metropolitan {
+                    background-color: #660066 !important;
+                    color: #fff !important;
+                }
+
+                .overground {
+                    background-color: #ff6600 !important;
+                    color: #fff !important;
+                }
+
+                .piccadilly {
+                    background-color: #000099 !important;
+                    color: #fff !important;
+                }
+
+                .thameslink {
+                    background-color: #fff !important;
+                    color: #000 !important;
+                }
+
+                .victoria {
+                    background-color: #0099cc !important;
+                    color: #fff !important;
+                }
+
+                .trams {
+                    background-color: #66cc00 !important;
+                    color: #fff !important;
+                }
+
+                .cablecar {
+                    background-color: #e21836 !important;
+                    color: #fff !important;
+                }
+
+                .tflrail {
+                    background-color: #7156a5 !important;
+                    color: #fff !important;
+                }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <h1>World Cup of lines on the TfL Map 2020</h1>
     <main id="tournament">
-      <ul class="round round-1">
-        <li class="spacer">&nbsp;</li>
+        <ul class="round round-1">
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top bakerloo">Bakerloo <span>3618</span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom northern">Northern <span>3703</span></li>
+            <li class="game game-top bakerloo">Bakerloo <span>3618</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom northern">Northern <span>3703</span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top jubilee">Jubilee <span>4213</span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom tflrail">TfL Rail <span>1410</span></li>
+            <li class="game game-top jubilee">Jubilee <span>4213</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom tflrail">TfL Rail <span>1410</span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top central">Central <span>0</span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom district">District <span>0</span></li>
+            <li class="game game-top central">Central <span>0</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom district">District <span>0</span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top circle">Circle <span>0</span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom thameslink">Thameslink <span>0</span></li>
+            <li class="game game-top circle">Circle <span>0</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom thameslink">Thameslink <span>0</span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top handc">H&C <span>0</span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom victoria">Victoria <span>0</span></li>
+            <li class="game game-top handc">H&C <span>0</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom victoria">Victoria <span>0</span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top metropolitan">Metropolitan <span>0</span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom trams">Trams <span>0</span></li>
+            <li class="game game-top metropolitan">Metropolitan <span>0</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom trams">Trams <span>0</span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top overground">Overground <span>0</span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom cablecar">CableCar <span>0</span></li>
+            <li class="game game-top overground">Overground <span>0</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom cablecar">CableCar <span>0</span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top dlr">DLR <span>0</span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom piccadilly">Piccadilly <span>0</span></li>
+            <li class="game game-top dlr">DLR <span>0</span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom piccadilly">Piccadilly <span>0</span></li>
 
-        <li class="spacer">&nbsp;</li>
-      </ul>
-      <ul class="round round-2">
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
+        </ul>
+        <ul class="round round-2">
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top"> <span></span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom"> <span></span></li>
+            <li class="game game-top"> <span></span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom"> <span></span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top"> <span></span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom"> <span></span></li>
+            <li class="game game-top"> <span></span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom"> <span></span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top"> <span></span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom"> <span></span></li>
+            <li class="game game-top"> <span></span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom"> <span></span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top"> <span></span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom"> <span></span></li>
+            <li class="game game-top"> <span></span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom"> <span></span></li>
 
-        <li class="spacer">&nbsp;</li>
-      </ul>
-      <ul class="round round-3">
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
+        </ul>
+        <ul class="round round-3">
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top"> <span></span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom"> <span></span></li>
+            <li class="game game-top"> <span></span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom"> <span></span></li>
 
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top"> <span></span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom"> <span></span></li>
+            <li class="game game-top"> <span></span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom"> <span></span></li>
 
-        <li class="spacer">&nbsp;</li>
-      </ul>
-      <ul class="round round-4">
-        <li class="spacer">&nbsp;</li>
+            <li class="spacer">&nbsp;</li>
+        </ul>
+        <ul class="round round-4">
+            <li class="spacer">&nbsp;</li>
 
-        <li class="game game-top"> <span></span></li>
-        <li class="game game-spacer">&nbsp;</li>
-        <li class="game game-bottom"> <span></span></li>
+            <li class="game game-top"> <span></span></li>
+            <li class="game game-spacer">&nbsp;</li>
+            <li class="game game-bottom"> <span></span></li>
 
-        <li class="spacer">&nbsp;</li>
-      </ul>
+            <li class="spacer">&nbsp;</li>
+        </ul>
     </main>
-  </body>
+    <p>Last updated 26/10/2020 21:21:33</p>
+</body>
 </html>
