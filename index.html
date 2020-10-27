@@ -2,151 +2,151 @@
 <head>
     <title>World Cup of lines on the TfL Map 2020</title>
     <style>
-                /*
+        /*
          *  Flex Layout Specifics
         */
-                main {
-                    display: flex;
-                    flex-direction: row;
+        main {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .round {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 200px;
+            list-style: none;
+            padding: 0;
+        }
+
+            .round .spacer {
+                flex-grow: 1;
+            }
+
+                .round .spacer:first-child,
+                .round .spacer:last-child {
+                    flex-grow: 0.5;
                 }
 
-                .round {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    width: 200px;
-                    list-style: none;
-                    padding: 0;
-                }
+            .round .game-spacer {
+                flex-grow: 1;
+            }
 
-                    .round .spacer {
-                        flex-grow: 1;
-                    }
-
-                        .round .spacer:first-child,
-                        .round .spacer:last-child {
-                            flex-grow: 0.5;
-                        }
-
-                    .round .game-spacer {
-                        flex-grow: 1;
-                    }
-
-                /*
+        /*
          *  General Styles
         */
-                body {
-                    font-family: sans-serif;
-                    font-size: small;
-                    padding: 10px;
-                    line-height: 1.4em;
-                }
+        body {
+            font-family: sans-serif;
+            font-size: small;
+            padding: 10px;
+            line-height: 1.4em;
+        }
 
-                li.game {
-                    padding-left: 20px;
-                }
+        li.game {
+            padding-left: 20px;
+        }
 
-                    li.game.winner {
-                        font-weight: bold;
-                    }
+            li.game.winner {
+                font-weight: bold;
+            }
 
-                    li.game span {
-                        float: right;
-                        margin-right: 5px;
-                    }
+            li.game span {
+                float: right;
+                margin-right: 5px;
+            }
 
-                li.game-top {
-                    border-bottom: 1px solid #aaa;
-                }
+        li.game-top {
+            border-bottom: 1px solid #aaa;
+        }
 
-                li.game-spacer {
-                    border-right: 1px solid #aaa;
-                    min-height: 40px;
-                }
+        li.game-spacer {
+            border-right: 1px solid #aaa;
+            min-height: 40px;
+        }
 
-                li.game-bottom {
-                    border-top: 1px solid #aaa;
-                }
+        li.game-bottom {
+            border-top: 1px solid #aaa;
+        }
 
-                .bakerloo {
-                    background-color: #996633 !important;
-                    color: #fff !important;
-                }
+        .bakerloo {
+            background-color: #996633 !important;
+            color: #fff !important;
+        }
 
-                .northern {
-                    background-color: #000 !important;
-                    color: #fff !important;
-                }
+        .northern {
+            background-color: #000 !important;
+            color: #fff !important;
+        }
 
-                .central {
-                    background-color: #cc3333 !important;
-                    color: #fff !important;
-                }
+        .central {
+            background-color: #cc3333 !important;
+            color: #fff !important;
+        }
 
-                .circle {
-                    background-color: #ffcc00 !important;
-                    color: #000 !important;
-                }
+        .circle {
+            background-color: #ffcc00 !important;
+            color: #000 !important;
+        }
 
-                .district {
-                    background-color: #006633 !important;
-                    color: #fff !important;
-                }
+        .district {
+            background-color: #006633 !important;
+            color: #fff !important;
+        }
 
-                .dlr {
-                    background-color: #009999 !important;
-                    color: #fff !important;
-                }
+        .dlr {
+            background-color: #009999 !important;
+            color: #fff !important;
+        }
 
-                .handc {
-                    background-color: #cc9999 !important;
-                    color: #000 !important;
-                }
+        .handc {
+            background-color: #cc9999 !important;
+            color: #000 !important;
+        }
 
-                .jubilee {
-                    background-color: #868f98 !important;
-                    color: #000 !important;
-                }
+        .jubilee {
+            background-color: #868f98 !important;
+            color: #000 !important;
+        }
 
-                .metropolitan {
-                    background-color: #660066 !important;
-                    color: #fff !important;
-                }
+        .metropolitan {
+            background-color: #660066 !important;
+            color: #fff !important;
+        }
 
-                .overground {
-                    background-color: #ff6600 !important;
-                    color: #fff !important;
-                }
+        .overground {
+            background-color: #ff6600 !important;
+            color: #fff !important;
+        }
 
-                .piccadilly {
-                    background-color: #000099 !important;
-                    color: #fff !important;
-                }
+        .piccadilly {
+            background-color: #000099 !important;
+            color: #fff !important;
+        }
 
-                .thameslink {
-                    background-color: #fff !important;
-                    color: #000 !important;
-                }
+        .thameslink {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
 
-                .victoria {
-                    background-color: #0099cc !important;
-                    color: #fff !important;
-                }
+        .victoria {
+            background-color: #0099cc !important;
+            color: #fff !important;
+        }
 
-                .trams {
-                    background-color: #66cc00 !important;
-                    color: #fff !important;
-                }
+        .trams {
+            background-color: #66cc00 !important;
+            color: #fff !important;
+        }
 
-                .cablecar {
-                    background-color: #e21836 !important;
-                    color: #fff !important;
-                }
+        .cablecar {
+            background-color: #e21836 !important;
+            color: #fff !important;
+        }
 
-                .tflrail {
-                    background-color: #7156a5 !important;
-                    color: #fff !important;
-                }
+        .tflrail {
+            background-color: #7156a5 !important;
+            color: #fff !important;
+        }
     </style>
 </head>
 <body>
@@ -167,15 +167,15 @@
 
             <li class="spacer">&nbsp;</li>
 
-            <li class="game game-top central">Central <span>601</span></li>
+            <li class="game game-top central">Central <span>651</span></li>
             <li class="game game-spacer">&nbsp;</li>
-            <li class="game game-bottom district">District <span>911</span></li>
+            <li class="game game-bottom district">District <span>969</span></li>
 
             <li class="spacer">&nbsp;</li>
 
-            <li class="game game-top circle">Circle <span>527</span></li>
+            <li class="game game-top circle">Circle <span>550</span></li>
             <li class="game game-spacer">&nbsp;</li>
-            <li class="game game-bottom thameslink">Thameslink <span>904</span></li>
+            <li class="game game-bottom thameslink">Thameslink <span>938</span></li>
 
             <li class="spacer">&nbsp;</li>
 
@@ -212,49 +212,49 @@
 
             <li class="spacer">&nbsp;</li>
 
-            <li class="game game-top"> <span></span></li>
+            <li class="game game-top">? <span></span></li>
             <li class="game game-spacer">&nbsp;</li>
-            <li class="game game-bottom"> <span></span></li>
+            <li class="game game-bottom">? <span></span></li>
 
             <li class="spacer">&nbsp;</li>
 
-            <li class="game game-top"> <span></span></li>
+            <li class="game game-top">? <span></span></li>
             <li class="game game-spacer">&nbsp;</li>
-            <li class="game game-bottom"> <span></span></li>
+            <li class="game game-bottom">? <span></span></li>
 
             <li class="spacer">&nbsp;</li>
 
-            <li class="game game-top"> <span></span></li>
+            <li class="game game-top">? <span></span></li>
             <li class="game game-spacer">&nbsp;</li>
-            <li class="game game-bottom"> <span></span></li>
+            <li class="game game-bottom">? <span></span></li>
 
             <li class="spacer">&nbsp;</li>
         </ul>
         <ul class="round round-3">
             <li class="spacer">&nbsp;</li>
 
-            <li class="game game-top"> <span></span></li>
+            <li class="game game-top">? <span></span></li>
             <li class="game game-spacer">&nbsp;</li>
-            <li class="game game-bottom"> <span></span></li>
+            <li class="game game-bottom">? <span></span></li>
 
             <li class="spacer">&nbsp;</li>
 
-            <li class="game game-top"> <span></span></li>
+            <li class="game game-top">? <span></span></li>
             <li class="game game-spacer">&nbsp;</li>
-            <li class="game game-bottom"> <span></span></li>
+            <li class="game game-bottom">? <span></span></li>
 
             <li class="spacer">&nbsp;</li>
         </ul>
         <ul class="round round-4">
             <li class="spacer">&nbsp;</li>
 
-            <li class="game game-top"> <span></span></li>
+            <li class="game game-top">? <span></span></li>
             <li class="game game-spacer">&nbsp;</li>
-            <li class="game game-bottom"> <span></span></li>
+            <li class="game game-bottom">? <span></span></li>
 
             <li class="spacer">&nbsp;</li>
         </ul>
     </main>
-    <p>Last updated 10/27/2020 8:45:00 AM</p>
+    <p>Last updated 10/27/2020 8:48:50 AM</p>
 </body>
 </html>
